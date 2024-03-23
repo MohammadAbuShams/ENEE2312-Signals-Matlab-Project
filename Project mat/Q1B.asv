@@ -1,0 +1,7 @@
+t=0:0.01:20;
+x=(t.*heaviside(t))-((t-5).*heaviside(t-5))-((t-4).*heaviside(t-4))+((t-9).*heaviside(t-9));
+plot(t,x);
+xlabel ('t axsis');
+ylabel(' x(t)');
+title ('Question 1 part 1');
+

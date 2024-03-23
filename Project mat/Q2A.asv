@@ -1,0 +1,7 @@
+t=0:0.001:1;
+x= 5.*sin(10.*pi.*t);
+plot(t,x);
+xlabel ('t');
+ylabel(' x(t)');
+title ('Question 2 part A');
+ylim([-5 5]);

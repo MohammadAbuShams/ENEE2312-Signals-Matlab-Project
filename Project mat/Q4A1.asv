@@ -1,0 +1,23 @@
+t=-15:0.1:15;
+sum_k=0; 
+for k =-80:1:80 
+ if(mod(k,2)==1)
+   x=(4/(pi.*n).*exp((-1i.*pi)/2)).*exp(1i*n*t);
+        sum_k = sum_k +x ;
+        end
+    end 
+    Sum_k= Sum_k+5 ;
+    Htime=(5*exp(-4*t));
+    XFrequency=fft(Sum_k);
+    HFrequency=fft(HT);
+    YF = XF .* HF ;
+    Magnitude = abs(YF); 
+    Angle = angle(YF);
+
+figure
+plot(Magnitude);
+figure
+plot(Angle);
+figure 
+plot(t,yt);
+

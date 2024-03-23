@@ -1,0 +1,25 @@
+syms t;
+HT=(5*exp(-4*t));
+syms f;
+HF = fourier(HT,f)
+TS = 1/50;
+t=0:TS:10-TS;
+YT=(5*exp(-4*t));
+Y = fft(YT);
+FS = 1/TS;
+F = (0:length(Y)-1)*FS/length(Y);
+figure
+k= length(y);
+FSH = (-k/2:k/2-1)*(FS/k);
+YSH = fftshift(Y);
+YMAG = abs(YSH);
+plot(FSH,YMAG)
+xlabel('Frequency (Hz)')
+ylabel('Magn')
+title('Magnitude')
+YPH = angle(Y);
+figure
+plot(FSH,YPH)
+xlabel('Frequency (Hz)')
+ylabel('Phase')
+title('Phase spectra')
